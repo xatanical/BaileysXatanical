@@ -27,10 +27,11 @@
 - 💯**Support Whatsapp Businnes** — Baileys Ini Support Whatsapp Baileys Cocok Buat Bot 2025 
 
 ---
+## © Erlangga Developer
 
 ## 🧰 Contoh Penggunaan
 
 ```bash
 npm install github:ErlanggaaXzzz/Baileys
 
-## © Erlangga Developer
+
