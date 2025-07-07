@@ -31,4 +31,6 @@
 ## 🧰 Contoh Penggunaan
 
 ```bash
-npm install @whiskeysockets/baileys
+npm install github:ErlanggaaXzzz/Baileys
+
+## © Erlangga Developer
