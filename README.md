@@ -32,6 +32,5 @@
 ## 🧰 Contoh Penggunaan
 
 ```bash
-npm install github:ErlanggaaXzzz/Baileys
-
+npm install baileys-erlangga@mod
 
