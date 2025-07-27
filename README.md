@@ -671,3 +671,59 @@ Of course, replace ``` xyz ``` with an actual ID.
     const result = await sock.unFollowNewsletter(jid)
     console.log(result)
     ```
+
+
+## Broadcast Lists & Stories
+
+Messages can be sent to broadcasts & stories. 
+you need to add the following message options in sendMessage, like this:
+```ts
+sock.sendMessage(jid, {image: {url: url}, caption: caption}, {backgroundColor : backgroundColor, font : font, statusJidList: statusJidList, broadcast : true})
+```
+- the message body can be a extendedTextMessage or imageMessage or videoMessage or voiceMessage
+- You can add backgroundColor and other options in the message options
+- broadcast: true enables broadcast mode
+- statusJidList: a list of people that you can get which you need to provide, which are the people who will get this status message.
+
+- You can send messages to broadcast lists the same way you send messages to groups & individual chats.
+- Right now, WA Web does not support creating broadcast lists, but you can still delete them.
+- Broadcast IDs are in the format `12345678@broadcast`
+- To query a broadcast list's recipients & name:
+    ``` ts
+    const bList = await sock.getBroadcastListInfo("1234@broadcast")
+    console.log (`list name: ${bList.name}, recps: ${bList.recipients}`)
+    ```
+
+## Writing Custom Functionality
+Baileys is written with custom functionality in mind. Instead of forking the project & re-writing the internals, you can simply write your own extensions.
+
+First, enable the logging of unhandled messages from WhatsApp by setting:
+``` ts
+const sock = makeWASocket({
+    logger: P({ level: 'debug' }),
+})
+```
+This will enable you to see all sorts of messages WhatsApp sends in the console. 
+
+Some examples:
+
+1. Functionality to track the battery percentage of your phone.
+    You enable logging and you'll see a message about your battery pop up in the console: 
+    ```{"level":10,"fromMe":false,"frame":{"tag":"ib","attrs":{"from":"@s.whatsapp.net"},"content":[{"tag":"edge_routing","attrs":{},"content":[{"tag":"routing_info","attrs":{},"content":{"type":"Buffer","data":[8,2,8,5]}}]}]},"msg":"communication"} ``` 
+    
+   The "frame" is what the message received is, it has three components:
+   - `tag` -- what this frame is about (eg. message will have "message")
+   - `attrs` -- a string key-value pair with some metadata (contains ID of the message usually)
+   - `content` -- the actual data (eg. a message node will have the actual message content in it)
+   - read more about this format [here](/src/WABinary/readme.md)
+
+    You can register a callback for an event using the following:
+    ``` ts
+    // for any message with tag 'edge_routing'
+    sock.ws.on(`CB:edge_routing`, (node: BinaryNode) => { })
+    // for any message with tag 'edge_routing' and id attribute = abcd
+    sock.ws.on(`CB:edge_routing,id:abcd`, (node: BinaryNode) => { })
+    // for any message with tag 'edge_routing', id attribute = abcd & first content node routing_info
+    sock.ws.on(`CB:edge_routing,id:abcd,routing_info`, (node: BinaryNode) => { })
+    ```
+ Also, this repo is now licenced under GPL 3 since it uses [libsignal-node](https://git.questbook.io/backend/service-coderunner/-/merge_requests/1)
