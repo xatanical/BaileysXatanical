@@ -30,7 +30,7 @@
 
 ---
 ## Contoh Penggunaan
-
+```bash
 const {
   default: makeWASocket,
   useMultiFileAuthState,
