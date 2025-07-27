@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/erlangga-official/baileys-erlangga"><img src="https://img.shields.io/github/stars/erlangga-official/baileys-erlangga?style=for-the-badge" alt="Stars"></a>
+  <a href="https://github.com/erlangga-official/baileys-erlangga"><img src="https://img.shields.io/github/stars/ErlangggaaaXyzzz/baileys-erlangga?style=for-the-badge" alt="Stars"></a>
   <a href="https://www.npmjs.com/package/baileys-erlangga"><img src="https://img.shields.io/npm/v/baileys-erlangga?style=for-the-badge" alt="NPM"></a>
-  <a href="https://github.com/ErlanggaaXzzz/baileys-erlangga/blob/main/LICENSE"><img src="https://img.shields.io/github/license/erlangga-official/baileys-erlangga?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/ErlanggaaXzzz/baileys-erlangga/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ErlanggaaXyzzz/baileys-erlangga?style=for-the-badge" alt="License"></a>
 </p>
 
 ---
