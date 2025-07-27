@@ -79,6 +79,15 @@ async function connectBot() {
 connectBot();
 ```
 
+## ⚖️ Lisensi
+
+Lisensi MIT (Free to Use)
+Silakan gunakan, modifikasi, dan distribusikan sesuka hati — dengan tetap mencantumkan atribusi kepada pembuat asli dan fork ini:
+```bash
+Copyright (c) 2025 Erlangga
+```
+
+
 ## 📦 Instalasi
 
 ```bash
