@@ -38,45 +38,65 @@ const {
   fetchLatestBaileysVersion
 } = require('baileys-erlangga');
 
-async function connectBot() {
-  const { state, saveCreds } = await useMultiFileAuthState('./session');
-  const { version } = await fetchLatestBaileysVersion();
-
-  const sock = makeWASocket({
-    version,
-    auth: state,
-    printQRInTerminal: true
-  });
-
-  sock.ev.on('creds.update', saveCreds);
-  sock.ev.on('connection.update', (update) => {
-    const { connection, lastDisconnect } = update;
-    if (
-      connection === 'close' &&
-      lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut
-    ) {
-      connectBot(); // Reconnect otomatis
-    } else if (connection === 'open') {
-      console.log('✅ Bot sudah tersambung ke WhatsApp!');
-    }
-  });
-
-  sock.ev.on('messages.upsert', async (msg) => {
-    const m = msg.messages[0];
-    if (!m.message || m.key.fromMe) return;
-
-    const text =
-      m.message.conversation ||
-      m.message.extendedTextMessage?.text ||
-      '';
-
-    if (text.toLowerCase() === 'ping') {
-      await sock.sendMessage(m.key.remoteJid, { text: 'Pong!' });
-    }
-  });
+const question = (text) => {
+    const rl = readline.createInterface({ 
+        input: process.stdin, 
+        output: process.stdout 
+    });
+    return new Promise((resolve) => { rl.question(text, resolve) });
 }
 
-connectBot();
+// Fungsi Untuk Connet Ke Whatsapp
+
+async function StartBot(usePairingCode = true) {    
+	const {
+		state,
+		saveCreds
+	} = await useMultiFileAuthState("session")
+	const erlangga = makeWASocket({
+		printQRInTerminal: !usePairingCode,
+		syncFullHistory: true,
+		markOnlineOnConnect: true,
+		connectTimeoutMs: 60000,
+		defaultQueryTimeoutMs: 0,
+		keepAliveIntervalMs: 10000,
+		generateHighQualityLinkPreview: true,
+		patchMessageBeforeSending: (message) => {
+			const requiresPatch = !!(
+				message.buttonsMessage ||
+				message.templateMessage ||
+				message.listMessage
+			);
+			if (requiresPatch) {
+				message = {
+					viewOnceMessage: {
+						message: {
+							messageContextInfo: {
+								deviceListMetadataVersion: 2,
+								deviceListMetadata: {},
+							},
+							...message,
+						},
+					},
+				};
+			}
+
+			return message;
+		},
+		version: (await (await fetch('https://raw.githubusercontent.com/ErlanggaaXzzz/Baileys/refs/heads/main/lib/Defaults/baileys-version.json')).json()).version,
+		browser: ["Ubuntu", "Chrome", "20.0.04"],
+		logger: pino({
+			level: 'fatal'
+		}),
+		auth: {
+			creds: state.creds,
+			keys: makeCacheableSignalKeyStore(state.keys, pino().child({
+				level: 'silent',
+				stream: 'store'
+			})),
+		}
+	});
+
 ```
 
 ## ⚖️ Lisensi
