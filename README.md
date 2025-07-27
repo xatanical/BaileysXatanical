@@ -30,7 +30,8 @@
 
 ---
 ## Contoh Penggunaan
-```bash
+
+```ts
 const {
   default: makeWASocket,
   useMultiFileAuthState,
