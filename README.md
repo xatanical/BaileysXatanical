@@ -28,9 +28,50 @@
 
 ---
 
+---
+
+🛠️ Contoh Penggunaan Dasar
+
+const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = require('baileys-erlangga');
+
+async function connectBot() {
+  const { state, saveCreds } = await useMultiFileAuthState('./session');
+  const { version } = await fetchLatestBaileysVersion();
+
+  const sock = makeWASocket({
+    version,
+    auth: state,
+    printQRInTerminal: true
+  });
+
+  sock.ev.on('creds.update', saveCreds);
+  sock.ev.on('connection.update', (update) => {
+    const { connection, lastDisconnect } = update;
+    if (connection === 'close' && lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut) {
+      connectBot(); // Reconnect otomatis
+    } else if (connection === 'open') {
+      console.log('✅ Bot sudah tersambung ke WhatsApp!');
+    }
+  });
+
+  sock.ev.on('messages.upsert', async (msg) => {
+    const m = msg.messages[0];
+    if (!m.message || m.key.fromMe) return;
+
+    const text = m.message.conversation || m.message.extendedTextMessage?.text || '';
+    if (text.toLowerCase() === 'ping') {
+      await sock.sendMessage(m.key.remoteJid, { text: 'Pong!' });
+    }
+  });
+}
+
+connectBot();
+
+
+---
+
 ## 📦 Instalasi
 
 ```bash
 npm install baileys-erlangga@mod
 
-> Pastikan Node.js versi 18+ dan npm versi terbaru sudah terpasang.
