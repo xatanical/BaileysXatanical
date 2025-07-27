@@ -26,6 +26,7 @@
 - 💬 **Dukungan Komunitas Developer** — Dari dev, untuk dev
 - 💥 **Diuji Crash-Resistant** — Cocok untuk eksperimen bot tingkat lanjut
 
+
 ## ⚖️ Lisensi
 
 Lisensi MIT (Free to Use)
@@ -34,10 +35,15 @@ Silakan gunakan, modifikasi, dan distribusikan sesuka hati — dengan tetap menc
 Copyright (c) 2025 Erlangga Official
 
 
+
 ## 📦 Instalasi
 
 ```bash
 npm install baileys-erlangga@mod
+
+```
+
+
 
 
 ---
