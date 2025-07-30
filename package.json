@@ -11,14 +11,14 @@
     "whatsapp-group",
     "automation",
     "multi-device",
-    "Erlangga Devoper"
+    "ErlanggaOfficial"
   ],
   "homepage": "https://github.com/WhiskeySockets/Baileys",
   "repository": {
     "url": "git@github.com:WhiskeySockets/Baileys.git"
   },
   "license": "MIT",
-  "author": "Erlangga Official",
+  "author": "Adhiraj Singh",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -52,7 +52,7 @@
     "cache-manager": "4.0.1",
     "futoin-hkdf": "^1.5.1",
     "libphonenumber-js": "^1.10.20",
-    "libsignal": "github:adiwajshing/libsignal-node",
+    "libsignal": "github:kiuur/libsignal-node",
     "music-metadata": "^7.12.3",
     "node-cache": "^5.1.2",
     "pino": "^7.0.0",
