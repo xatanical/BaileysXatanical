@@ -1,5 +1,5 @@
 {
-  "name": "baileys",
+  "name": "@erlangga/baileys",
   "version": "6.7.4",
   "description": "WhatsApp API",
   "keywords": [
