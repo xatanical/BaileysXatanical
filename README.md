@@ -16,7 +16,7 @@
 
 ---
 
-## 🚀 Keunggulan Utama
+## Keunggulan Utama
 
 - 🔒 **Pairing Kode Custom** — Pairing bot tanpa ribet dan full kendali
 - 🔄 **Session Recovery Otomatis** — Tidak perlu login ulang setiap waktu
@@ -27,7 +27,7 @@
 - 💥 **Diuji Crash-Resistant** — Cocok untuk eksperimen bot tingkat lanjut
 
 
-## ⚖️ Lisensi
+## Lisensi
 
 Lisensi MIT (Free to Use)
 Silakan gunakan, modifikasi, dan distribusikan sesuka hati — dengan tetap mencantumkan atribusi kepada pembuat asli dan fork ini:
@@ -36,14 +36,9 @@ Copyright (c) 2025 Erlangga Official
 
 
 
-## 📦 Instalasi
+## Instalasi
 
 ```bash
 npm install baileys-erlangga@mod
 
 ```
-
-
-
-## Dalam Tahap Pengoptimalan
-- ErlanggaOfficial
