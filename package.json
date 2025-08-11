@@ -13,12 +13,12 @@
     "multi-device",
     "ErlanggaOfficial"
   ],
-  "homepage": "https://github.com/WhiskeySockets/Baileys",
+  "homepage": "https://github.com/ErlanggaaXzzz/Baileys",
   "repository": {
-    "url": "git@github.com:WhiskeySockets/Baileys.git"
+    "url": "git@github.com:ErlanggaaXzzz/Baileys.git"
   },
   "license": "MIT",
-  "author": "Adhiraj Singh",
+  "author": "ErlanggaOfficial",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
