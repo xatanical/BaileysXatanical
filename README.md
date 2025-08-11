@@ -1,7 +1,7 @@
-# ⚡️ Baileys-Erlangga - WhatsApp Bot Framework 2025 Edition
+# Baileys-Erlangga - WhatsApp Bot Framework 2025 Spesial Edition
 
 <p align="center">
-  <img src="https://files.catbox.moe/fi0co3.jpeg" width="300" alt="Baileys Erlangga Logo" />
+  <img src="https://files.catbox.moe/pfttxc.jpg" width="300" alt="Baileys Erlangga Logo" />
 </p>
 
 <p align="center">
