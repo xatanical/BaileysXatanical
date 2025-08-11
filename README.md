@@ -39,6 +39,6 @@ Copyright (c) 2025 Erlangga Official
 ## Instalasi
 
 ```bash
-npm install baileys-erlangga@mod
+npm install baileys-erlangga
 
 ```
