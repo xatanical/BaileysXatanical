@@ -44,7 +44,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@adiwajshing/keyed-db": "^0.2.4",
+    "@erlanggaofficial/keyed-db": "^1.2.5",
     "@hapi/boom": "^9.1.3",
     "@cacheable/node-cache": "^1.4.0",
     "audio-decode": "^2.1.3",
