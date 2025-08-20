@@ -7,7 +7,6 @@
 <p align="center">
   <a href="https://github.com/ErlanggaaXzzz/Baileys"><img src="https://img.shields.io/github/stars/ErlanggaaXzzz/Baileys?style=for-the-badge" alt="Stars"></a>
   <a href="https://www.npmjs.com/package/baileys-erlangga"><img src="https://img.shields.io/npm/v/baileys-erlangga?style=for-the-badge" alt="NPM"></a>
-  <a href="https://github.com/ErlanggaaXzzz/Baileys/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ErlanggaaXzzz/Baileys?style=for-the-badge" alt="License"></a>
 </p>
 
 ---
@@ -25,14 +24,6 @@
 - 📱 **Multi-Device Compatible** — 100% jalan di WA MD versi terbaru
 - 💬 **Dukungan Komunitas Developer** — Dari dev, untuk dev
 - 💥 **Diuji Crash-Resistant** — Cocok untuk eksperimen bot tingkat lanjut
-
-
-## Lisensi
-
-Lisensi MIT (Free to Use)
-Silakan gunakan, modifikasi, dan distribusikan sesuka hati — dengan tetap mencantumkan atribusi kepada pembuat asli dan fork ini:
-
-Copyright (c) 2025 Erlangga Official
 
 
 
