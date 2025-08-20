@@ -1,7 +1,7 @@
-// dugong.d.ts
+// Ahh
 import { proto } from '../../WAProto';
 
-declare namespace kikyy {
+declare namespace langgxyz {
     interface MediaUploadOptions {
         fileEncSha256?: Buffer;
         mediaType?: string;
@@ -112,48 +112,48 @@ declare namespace kikyy {
     }
 }
 
-declare class kikyy {
+declare class langgxyz {
     constructor(
         utils: {
-            prepareWAMessageMedia: (media: any, options: kikyy.WAMessageContentGenerationOptions) => Promise<any>;
-            generateWAMessageContent: (content: any, options: kikyy.WAMessageContentGenerationOptions) => Promise<any>;
+            prepareWAMessageMedia: (media: any, options: langgxyz.WAMessageContentGenerationOptions) => Promise<any>;
+            generateWAMessageContent: (content: any, options: langgxyz.WAMessageContentGenerationOptions) => Promise<any>;
             generateWAMessageFromContent: (jid: string, content: any, options?: any) => Promise<any>;
             generateMessageID: () => string;
         },
-        waUploadToServer: kikyy.WAMediaUploadFunction,
+        waUploadToServer: langgxyz.WAMediaUploadFunction,
         relayMessageFn?: (jid: string, content: any, options?: any) => Promise<any>
     );
     
-    detectType(content: kikyy.MessageContent): 'PAYMENT' | 'PRODUCT' | 'INTERACTIVE' | 'ALBUM' | 'EVENT' | null;
+    detectType(content: langgxyz.MessageContent): 'PAYMENT' | 'PRODUCT' | 'INTERACTIVE' | 'ALBUM' | 'EVENT' | null;
 
     handlePayment(
-        content: { requestPaymentMessage: kikyy.PaymentMessage },
+        content: { requestPaymentMessage: langgxyz.PaymentMessage },
         quoted?: proto.IWebMessageInfo
     ): Promise<{ requestPaymentMessage: proto.Message.RequestPaymentMessage }>;
 
     handleProduct(
-        content: { productMessage: kikyy.ProductMessage },
+        content: { productMessage: langgxyz.ProductMessage },
         jid: string,
         quoted?: proto.IWebMessageInfo
     ): Promise<{ viewOnceMessage: proto.Message.ViewOnceMessage }>;
 
     handleInteractive(
-        content: { interactiveMessage: kikyy.InteractiveMessage },
+        content: { interactiveMessage: langgxyz.InteractiveMessage },
         jid: string,
         quoted?: proto.IWebMessageInfo
     ): Promise<{ viewOnceMessage: proto.Message.ViewOnceMessage }>;
 
     handleAlbum(
-        content: { albumMessage: kikyy.AlbumItem[] },
+        content: { albumMessage: langgxyz.AlbumItem[] },
         jid: string,
         quoted?: proto.IWebMessageInfo
     ): Promise<any>;
 
     handleEvent(
-        content: { eventMessage: kikyy.EventMessage },
+        content: { eventMessage: langgxyz.EventMessage },
         jid: string,
         quoted?: proto.IWebMessageInfo
     ): Promise<any>;
 }
 
-export = kikyy;
+export = langgxyz;
