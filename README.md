@@ -1,17 +1,17 @@
-# Baileys-Erlangga - WhatsApp Bot Framework 2025 Spesial Edition
+# Baileys-Xatanical - WhatsApp Bot Framework 2025 Spesial Edition
 
 <p align="center">
-  <img src="https://files.catbox.moe/pfttxc.jpg" width="300" alt="Baileys Erlangga Logo" />
+  <img src="https://files.catbox.moe/pfttxc.jpg" width="300" alt="Xatanical Logo" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/ErlanggaaXzzz/Baileys"><img src="https://img.shields.io/github/stars/ErlanggaaXzzz/Baileys?style=for-the-badge" alt="Stars"></a>
-  <a href="https://www.npmjs.com/package/baileys-erlangga"><img src="https://img.shields.io/npm/v/baileys-erlangga?style=for-the-badge" alt="NPM"></a>
+  <a href="https://github.com/xatanical/BaileysXatanical"><img src="https://img.shields.io/github/stars/xatanic/BaileysXatanical?style=for-the-badge" alt="Stars"></a>
+  <a href="https://www.npmjs.com/package/BaileysXatanical-xatanical"><img src="https://img.shields.io/npm/v/baileys-erlangga?style=for-the-badge" alt="NPM"></a>
 </p>
 
 ---
 
-**Baileys-Erlangga** adalah versi modifikasi dari [WhiskeySockets/Baileys](https://github.com/WhiskeySockets/Baileys), dirancang khusus untuk para developer bot WhatsApp di tahun 2025. Fokus utama versi ini adalah kestabilan pairing code, session auto-recovery, dan fitur tambahan eksklusif yang tidak tersedia di versi original.
+**BAILEYS XATANICAL** adalah versi modifikasi dari [WhiskeySockets/Baileys](https://github.com/WhiskeySockets/Baileys), dirancang khusus untuk para developer bot WhatsApp di tahun 2025. Fokus utama versi ini adalah kestabilan pairing code, session auto-recovery, dan fitur tambahan eksklusif yang tidak tersedia di versi original.
 
 ---
 
@@ -30,6 +30,6 @@
 ## Instalasi
 
 ```bash
-npm install baileys-erlangga
+npm install BaileysXatanical-xatanical
 
 ```
