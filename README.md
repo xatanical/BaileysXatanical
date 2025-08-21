@@ -1,7 +1,7 @@
 # Baileys-Xatanical - WhatsApp Bot Framework 2025 Spesial Edition
 
 <p align="center">
-  <img src="https://files.catbox.moe/pfttxc.jpg" width="300" alt="Xatanical Logo" />
+  <img src="https://files.catbox.moe/6wocmj.png" width="300" alt="Xatanical Logo" />
 </p>
 
 <p align="center">
